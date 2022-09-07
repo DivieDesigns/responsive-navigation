@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,500;1,400&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    font-family: 'Poppins', sans-serif;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.header{
+  border-bottom: 1px solid #482ff7;
+  padding: 15px 0;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.5rem;
+}
+
+.hamburger {
+  display: none;
+}
+
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background-color: #482ff7;
+  border-radius: 50em;
+}
+
+.bar:nth-child(2) {
+  width: 20px;
+}
+
+.bar:nth-child(3) {
+  width: 15px;
+}
+
+.nav-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 90px;
+}
+
+.nav-item {
+  margin-left: 5rem;
+}
+
+.nav-link{
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #482ff7;
+  transition:all 1.5s;
+}
+
+.nav-link:hover{
+  color: #482ff7;
+  text-decoration: underline;
+}
+
+.nav-logo {
+  font-size: 1.9em;
+  font-weight: 700;
+  color: #482ff7;
+  margin-left: 90px;
+  transition:all 1.5s;
+}
+
+@media only screen and (max-width: 768px) {
+  .nav-menu {
+      position: fixed;
+      left: 100%;
+      top: 0;
+      flex-direction: column;
+      background-color: #4a2ff79f;
+      width: 100%;
+      border-radius: 5px;
+      text-align: center;
+      transition: ease-in-out .75s;
+      box-shadow:
+          0 10px 27px rgba(0, 0, 0, 0.05);
+      backdrop-filter: blur(7px);
+      height: 500px;
+      padding: 80px 0;
+  }
+
+  .nav-logo {
+    font-size: 1.9em;
+    font-weight: 700;
+    color: #482ff7;
+    transition:all 1.5s;
+    margin-left: 10px;
+  }
+
+  .nav-link{
+    font-size: 1.6rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: white;
+    display: block;
+  }
+
+  a .nav-link{
+    display: inline-block;
+  }
+
+  .nav-link:hover{
+    text-decoration: underline;
+    color: white;
+  }
+
+  .nav-menu.active {
+      left: 0;
+  }
+
+  .nav-item {
+      margin:0;
+  }
+
+  .hamburger {
+      display: block;
+      cursor: pointer;
+  }
+
+  .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+  }
+
+  .hamburger.active .bar:nth-child(1) {
+      transform: translateY(8px) rotate(45deg);
+      background-color: white;
+  }
+
+  .hamburger.active .bar:nth-child(3) {
+      transform: translateY(-8px) rotate(-45deg);
+      background-color: white;
+      width: 25px;
+  }
+
+}
+

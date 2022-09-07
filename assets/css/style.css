@@ -135,15 +135,16 @@ body{
     .navbar ul {
         width: 100%;
         padding: 0rem;
-        background-color: #636e72;
-        opacity: .9;
+        background-color: #125c7769;
         height: 50vh;
         max-height: 0;
         overflow: hidden;
-        transition: all ease-in-out 0.3s;
+        transition: all ease-in-out 0.7s;
         display: flex;
         flex-direction: column;
         align-items: center;
+        backdrop-filter: blur(5px);
+        
     }
     .navbar ul.open{
         max-height: 100vh;
@@ -207,4 +208,9 @@ body{
     .navbar .navbar__toggler.open-navbar__toggler span::after {
         transform: translateY(-3px) rotate(-45deg);
     }
+
+    .navbar .navbar__toggler.active span{
+        opacity: 0;
+    }
+    
 }
